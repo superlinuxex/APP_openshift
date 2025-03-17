@@ -91,7 +91,7 @@ postgres       NodePort    10.217.5.222   <none>        5432:31815/TCP   12m
 
 
 ```bash
-<postgres_pod_ip> = localhost
+<postgres_pod_ip> = localhost, usar el pasword definido en el configMap
 psql -h <postgres_pod_ip> -U admin -p 5432 postgresdb
 CREATE USER testdbuser SUPERUSER;
 ALTER USER testdbuser WITH PASSWORD 'testpassword';
