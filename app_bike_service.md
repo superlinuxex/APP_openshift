@@ -82,6 +82,13 @@ spec:
 ```
 
 ### 2. Crear base de datos "pedal" y usuario "testdbuser"
+### Verificar el nombre del host ejemplo
+###  oc get svc -n <namespace>
+### NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+### postgres       NodePort    10.217.5.222   <none>        5432:31815/TCP   12m
+
+
+
 ```bash
 psql -h <postgres_pod_ip> -U admin -p 5432 postgresdb
 CREATE USER testdbuser SUPERUSER;
